@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day, Habiba!</h1>
+        <p class="message">You are the love of my life. Here's a little surprise just for you...</p>
+        
+        <!-- Photo Slideshow -->
+        <div class="slideshow">
+            <img src="1.png" alt="Memory 1" class="slide active">
+            <img src="1.png" alt="A few days before the army" class="slide">
+            <img src="1.png" alt="Memory 3" class="slide">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <!-- Reasons List -->
+        <ul class="reasons">
+            <li>Reason 1: Your smile lights up my world.</li>
+            <li>Reason 2: You make every day an adventure.</li>
+            <li>Reason 3: I can't imagine life without you.</li>
+        </ul>
+        
+        <!-- Interactive Button -->
+	<button id="surprise-btn">Click for a Surprise!</button>
+        <!-- Background Music -->
+        <audio id="bg-music" loop>
+            <source src="1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="play-music">Play Our Song ❤️</button>
+    </div>
+    
+    <!-- Modal Pop-Up -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Will You Be My Valentine? ❤️</h2>
+            <p>Forever and always, my love. Say yes?</p>
+            <button id="yes-btn">Yes! 💕</button>
+            <button id="no-btn">Maybe... 😏</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

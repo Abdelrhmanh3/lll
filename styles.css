@@ -1,0 +1,192 @@
+body {
+    font-family: 'Dancing+Script', cursive;
+    background: linear-gradient(135deg, #ffe6e6, #ffb3ba);
+    color: #d63384;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll from hearts */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff1493;
+}
+
+.message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 105, 180, 0.8);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Reasons */
+.reasons {
+    list-style: none;
+    padding: 0;
+}
+
+.reasons li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.reasons li:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons (الستايل الرقيق القديم) */
+#surprise-btn, #play-music {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block; /* عشان تبقى في النص */
+}
+
+#surprise-btn:hover, #play-music:hover {
+    background-color: #ff1493;
+}
+
+#surprise-btn {
+    display: none; /* مخفي في البداية */
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 2em;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+/* Floating Roses */
+.rose {
+    position: absolute;
+    color: #ff1493; /* لون وردي أحمر */
+    font-size: 2.5em;
+    animation: float 5s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#yes-btn, #no-btn {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#yes-btn:hover {
+    background-color: #ff1493;
+}
+
+#no-btn:hover {
+    background-color: #ccc;
+}
